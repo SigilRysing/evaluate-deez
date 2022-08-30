@@ -1,0 +1,9 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 525px;
+    background-color: darkgrey;
+}
