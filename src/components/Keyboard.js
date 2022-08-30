@@ -39,6 +39,7 @@ const Keyboard = props => {
                         <div
                           key={i} 
                           className='key'
+                          onClick={() => props.handleBttnClick(k)}
                         >{k}</div>
                     )
                 })

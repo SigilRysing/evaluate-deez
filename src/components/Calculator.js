@@ -4,10 +4,17 @@ import Keyboard from './Keyboard'
 import '../css/Calculator.css'
 
 const Calculator = () => {
+    
+    const handleBttnClick = bttn => {
+        console.log('you clicked the ' + bttn + ' button!')
+    }
+
     return (
-        <div class='calculator'>
+        <div className='calculator'>
             <Display/>
-            <Keyboard/>
+            <Keyboard
+              handleBttnClick={handleBttnClick}
+            />
         </div>
     )
 }
