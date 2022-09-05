@@ -1,8 +1,8 @@
 import '../css/Display.css'
 
-const Display = () => {
+const Display = props => {
     return (
-        <div className='display'>This is my display!</div>
+        <div className='display'>{props.display}</div>
     )
 }
 

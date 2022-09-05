@@ -1,17 +1,26 @@
+import { useState, useEffect } from 'react'
+
 import Display from './Display'
 import Keyboard from './Keyboard'
 
 import '../css/Calculator.css'
 
 const Calculator = () => {
+
+    const [display, setDisplay] = useState('')
     
     const handleBttnClick = bttn => {
-        console.log('you clicked the ' + bttn + ' button!')
+        let screen = display
+        screen += bttn
+        setDisplay(screen)
+        console.log(display)
     }
 
     return (
         <div className='calculator'>
-            <Display/>
+            <Display
+              display={display[0]}
+            />
             <Keyboard
               handleBttnClick={handleBttnClick}
             />
