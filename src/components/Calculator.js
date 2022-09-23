@@ -4,7 +4,7 @@ import Keyboard from './Keyboard'
 import '../css/Calculator.css'
 
 const Calculator = () => {
-
+    
     return (
         <div className='calculator'>
             <Display />
