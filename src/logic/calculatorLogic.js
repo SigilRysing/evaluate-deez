@@ -49,16 +49,11 @@ const calculatorLogic = {
             return this.operate(leftResult, root.data, rightResult)
         },
     
-        returnAnswer(input) { // post fix input goes here
+        returnAnswer(input) { // postfix input goes here
             const parsedInput = this.parse(input) // processed here
             return this.evaluate(parsedInput)
         }
-    },
-
-    initializeTree() {
-        return this.expressionTree
     }
-    
 }
 
 export default calculatorLogic 
