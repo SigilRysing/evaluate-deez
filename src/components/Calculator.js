@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import calculatorLogic from '../logic/calculatorLogic'
+import infixToPostfix from '../logic/infixToPostfix'
+
 import Display from './Display'
 
 import '../css/Calculator.css'
@@ -33,17 +36,26 @@ const Calculator = () => {
         '<='
     ])
 
+    const [display, setDisplay] = useState("")
+    
+    const handleClick = (k) => {
+        setDisplay(display + k)
+    }
 
     return (
         <div className='calculator'>
-            <Display />
+            <Display
+              display={display}
+            />
             <div className='keyboard'>
             {
                 keys[0].map((k, i) => {
                     return (
+                        '5',
                         <div
                           key={i} 
                           className='key'
+                          onClick={() => handleClick(k)}
                         >{k}</div>
                     )
                 })
